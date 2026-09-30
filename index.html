@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facilitator Kit - Framing and Refining</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">
+      <span class="mono schema">AAI-E-MC1-S02-FAC01</span>
+      <span class="badge">Facilitator Kit</span>
+      <span class="badge">5 hrs, live session</span>
+      <span class="badge">Not counted</span>
+    </div>
+    <h1>Facilitator Kit &middot; Framing and Refining</h1>
+    <p class="subtitle">For the person running the session. Not learner-facing.</p>
+  </header>
+
+  <nav class="jump-nav" id="jump-nav">
+    <a href="#timeline">Timeline</a>
+    <a href="#demo">Live demo script</a>
+    <a href="#contingencies">Contingencies</a>
+    <a href="#answers">Answer bank</a>
+    <a href="#protocol">Wrong-answer protocol</a>
+  </nav>
+
+  <section id="timeline">
+    <h2>Session timeline &middot; 5 hours</h2>
+    <p>Talk time is shorter than learner practice time in every block. Each block names the asset it uses.</p>
+    <div class="timeline-list" id="timeline-list"></div>
+  </section>
+
+  <section id="demo">
+    <h2>Live demo script &middot; six-turn refinement</h2>
+    <p>Lines marked <span class="say-chip">SAY THIS</span> need exact delivery. Everything else is facilitator guidance.</p>
+    <div class="demo-list" id="demo-list"></div>
+  </section>
+
+  <section id="contingencies">
+    <h2>Contingencies</h2>
+    <div class="contingency-grid" id="contingency-grid"></div>
+  </section>
+
+  <section id="answers">
+    <h2>Answer bank</h2>
+    <p>Direct response, short reason, next action — for reading aloud in English or Gujarati.</p>
+
+    <input type="text" id="answer-search" class="answer-search" placeholder="Search a question, e.g. &quot;offline&quot; or &quot;grade&quot;">
+
+    <div class="filter-row" id="cluster-filter">
+      <button type="button" class="filter-chip active" data-cluster="all">All</button>
+    </div>
+
+    <div class="answer-list" id="answer-list"></div>
+    <p class="no-results" id="no-results" hidden>No questions match that search.</p>
+  </section>
+
+  <section id="protocol">
+    <h2>Wrong-answer-in-class protocol</h2>
+    <div class="protocol-card">
+      <ol class="protocol-steps" id="protocol-steps"></ol>
+    </div>
+  </section>
+
+  <div class="stop-rule">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9A6B00" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+    <div>
+      <span class="label">Safe fallback</span>
+      <p>If you don't know or can't verify an answer, say: &ldquo;I will verify this and confirm before the next session&rdquo; &mdash; then follow up with the programme owner. Never improvise on policy.</p>
+    </div>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
