@@ -106,6 +106,29 @@ var PROTOCOL = [
   'Note the moment in your facilitator log as a teaching example, not a failure.'
 ];
 
+// Five-screen pagination: any button with data-target swaps which .page
+// is visible and updates the progress dots.
+document.addEventListener('DOMContentLoaded', function () {
+  var pages = document.querySelectorAll('.page');
+  var dots = document.querySelectorAll('.progress-dot');
+
+  function showPage(index) {
+    pages.forEach(function (page, i) {
+      page.hidden = i !== index;
+    });
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle('active', i === index);
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.querySelectorAll('[data-target]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      showPage(parseInt(btn.getAttribute('data-target'), 10));
+    });
+  });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   // Timeline
   var timelineList = document.getElementById('timeline-list');
